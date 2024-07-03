@@ -1,0 +1,30 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.contenedor-app {
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        min-height: 100vh;
+    }
+
+    .imagen {
+        background-image: url("../img/1.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 20rem;
+    }
+
+    .app{
+        width: 95%;
+        margin:  0 auto;
+        padding: 2rem 2rem;
+        @include m.tablet{
+            overflow-y: scroll;
+            scrollbar-width: none
+        }
+    }
+
+}

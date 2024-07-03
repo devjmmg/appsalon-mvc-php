@@ -1,0 +1,46 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.seccion {
+
+    display: none;
+
+}
+
+.mostrar {
+
+    display: block;
+
+}
+
+.ocultar {
+
+    display: none;
+    
+}
+
+.barra {
+
+    .boton-azul {
+        @include m.boton(v.$blanco,v.$negro);
+        display: block
+    }
+
+    @include m.desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+.nav-admin {
+    @include m.desktop {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        display: block;
+    }
+}

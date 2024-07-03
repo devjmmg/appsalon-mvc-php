@@ -1,0 +1,59 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.listado-servicios {
+
+    text-align: center;
+    display: grid;
+    gap: 2rem;
+
+    @include m.desktop {
+
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+    .servicio {
+
+        background-color: v.$azul;
+        border-radius: 1rem;
+        transition: background-color .5s ease;
+
+        @include m.desktop {
+
+            transition: scale .5s ease;
+
+        }
+
+        &:hover {
+
+            cursor: pointer;
+            background-color: darken(v.$azul, 10%);
+            
+            @include m.desktop {
+
+                scale: 1.1;
+    
+            }
+
+        }
+
+        &.seleccionado {
+
+            //background: linear-gradient(to right, #ff0000, #ffff00);
+            background-color: orange
+
+        }
+
+        .precio-servicio {
+
+            font-weight: v.$black;
+            font-size: 2.5rem;
+
+        }
+
+
+
+    }
+
+}

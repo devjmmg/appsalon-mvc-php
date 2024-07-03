@@ -1,0 +1,66 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.citas {
+    
+    list-style: none;
+    padding: 0;
+    
+    li{
+        
+        border-top: .1rem solid v.$blanco;
+        
+        p{
+            font-weight: v.$bold;
+            color: v.$azul;
+            span,
+            .servicio {
+                font-weight: v.$regular;
+                color: v.$blanco;
+                
+            }
+            
+        }
+        
+    }
+
+    .total {
+
+        color: v.$azul;
+        font-weight: v.$bold;
+        span{
+            font-weight: v.$regular;
+            color: v.$blanco;
+        }
+    }
+    
+}
+
+.servicio_agregar {
+    .boton-verde {
+        display: block;
+    }
+}
+
+.table-servicio {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+        background-color: v.$blanco;
+        color: v.$negro;
+        padding: .5rem;
+    }
+
+    td {
+        text-align: center;
+        padding: 1rem;
+        border: .1rem solid v.$blanco;
+    }
+
+    tr{
+        &:hover {
+            background-color: v.$blanco;
+            color: v.$negro;
+        }
+    }
+}

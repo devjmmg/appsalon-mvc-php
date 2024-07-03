@@ -1,0 +1,43 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.acciones {
+
+    margin-top: 5rem;
+
+    @include m.desktop {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    a {
+        color: v.$blanco;
+        display: block;
+        text-align: center;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 1rem;
+        font-weight: v.$bold;
+        width: 100%;
+        transition: background-color .5s ease;
+
+        &:hover {
+            background-color: darken(v.$azul, 10%);
+        }
+
+        @include m.desktop {
+            margin-bottom: 0;
+
+            transition: scale .5s ease;
+
+            &:hover {
+                scale: 1.1;
+            }
+
+        }
+
+
+    }
+
+}
